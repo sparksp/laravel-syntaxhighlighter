@@ -1,22 +1,17 @@
-# SyntaxHighlighter for Laravel
+# SyntaxHighlighter Bundle, by Phill Sparks
 
-A simple bundle to provide [SyntaxHighlighter](http://alexgorbatchev.com/SyntaxHighlighter/) functions.
+A [SyntaxHighlighter](http://alexgorbatchev.com/SyntaxHighlighter/) bundle for Laravel, installable via the Artisan CLI:
 
-## Installation
+    php artisan bundle:install syntaxhighlighter
+    php artisan bundle:publish syntaxhighlighter
 
-Drop the **syntaxhighlighter** bundle into your **/bundles** directory and copy the contents of the **syntaxhighlighter/public** directory over to **/public/bundles/syntaxhighligter** (you may have to create some directories).
-
-## Highlight some code
-
-Just start the bundle and highlight some code:
+Then start the bundle and highlight some code:
 
     Bundle::start('syntaxhighlighter');
     echo SyntaxHighlighter::highlight($code, 'html');
 
-You'll also need to output the scripts from the 'footer' asset container somewhere, I suggest the end of your layout or footer partial.
+You'll also need to output the scripts from the 'footer' asset container somewhere (like the end of your layout):
 
     echo Asset::container('footer')->scripts();
-
-## Configuration
 
 You can change the default style and language in the **config/default.php**.  If you add any new brushes you can configure them in **config/brush.php**.
