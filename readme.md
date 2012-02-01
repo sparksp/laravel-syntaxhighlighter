@@ -3,9 +3,12 @@
 A [SyntaxHighlighter](http://alexgorbatchev.com/SyntaxHighlighter/) bundle for Laravel, installable via the Artisan CLI:
 
     php artisan bundle:install syntaxhighlighter
+
+Add the bundle to **bundles/bundles.php** and then publish the assets via the Artisan CLI:
+
     php artisan bundle:publish syntaxhighlighter
 
-Then start the bundle and highlight some code:
+Start the bundle and highlight some code:
 
     Bundle::start('syntaxhighlighter');
     echo SyntaxHighlighter::highlight($code, 'html');
